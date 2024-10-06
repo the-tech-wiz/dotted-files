@@ -1,0 +1,45 @@
+[unstable]
+profile-rustflags = true
+
+[alias]
+i  = "install --profile _install"
+in = "info -v"
+br = "b -r"
+bp = "b --profile _publish"
+bi = "b --profile _install"
+rr = "r -r"
+rp = "r --profile _publish"
+ri = "r --profile _install"
+cl = "clean"
+t  = "nextest run"
+tr = "t -r"
+tp = "t --cargo-profile _publish"
+ti = "t --cargo-profile _install"
+tl = "nextest list"
+a  = "ar --dev"
+ar = "asm --simplify"
+ap = "ar --profile _publish"
+ai = "ar --profile _install"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+opt-level = 3
+panic = "abort"
+strip = true
+
+[profile._publish]
+inherits = "release"
+codegen-units = 1
+lto = true
+
+[profile._install]
+inherits = "_publish"
+rustflags = ["-Ctarget-cpu=native"]
+
+[target.'cfg(all())']
+rustflags = ["-Zthreads=8"]
+
+[target.'cfg(all(target_cpu = "x86_64", target_os = "linux"))']
+rustflags = ["-Clink-arg=-fuse-ld=mold"]
