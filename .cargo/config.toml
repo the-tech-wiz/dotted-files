@@ -2,7 +2,7 @@
 profile-rustflags = true
 
 [alias]
-i  = "install --profile _install"
+i  = "inst"
 in = "info -v"
 br = "b -r"
 bp = "b --profile _publish"
@@ -20,26 +20,16 @@ a  = "ar --dev"
 ar = "asm --simplify"
 ap = "ar --profile _publish"
 ai = "ar --profile _install"
+u  = "update"
 
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-opt-level = 3
-panic = "abort"
-strip = true
-
-[profile._publish]
-inherits = "release"
-codegen-units = 1
-lto = true
-
-[profile._install]
-inherits = "_publish"
-rustflags = ["-Ctarget-cpu=native"]
+[profile]
+dev = { panic = "abort" }
+release = { opt-level = 3, panic = "abort", strip = true }
+_publish = { inherits = "release", codegen-units = 1, lto = true }
+_install = { inherits = "_publish", rustflags = ["-Ctarget-cpu=native"] }
 
 [target.'cfg(all())']
 rustflags = ["-Zthreads=8"]
 
-[target.'cfg(all(target_cpu = "x86_64", target_os = "linux"))']
+[target.'cfg(all(target_arch = "x86_64", target_os = "linux"))']
 rustflags = ["-Clink-arg=-fuse-ld=mold"]
