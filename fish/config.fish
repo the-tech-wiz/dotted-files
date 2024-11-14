@@ -7,6 +7,7 @@ fish_add_path $HOME/.local/bin
 if status is-interactive
     pfetch
     starship init fish | source
+    direnv hook fish | source
 
     alias ls 'eza --icons=auto'
     alias lla 'll -a'
