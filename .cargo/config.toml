@@ -1,5 +1,6 @@
 [unstable]
 profile-rustflags = true
+gc = true
 
 [alias]
 i  = "inst"
@@ -11,6 +12,7 @@ rr = "r -r"
 rp = "r --profile _publish"
 ri = "r --profile _install"
 cl = "clean"
+do = "d --open"
 t  = "nextest run"
 tr = "t -r"
 tp = "t --cargo-profile _publish"
@@ -21,6 +23,10 @@ ar = "asm --simplify"
 ap = "ar --profile _publish"
 ai = "ar --profile _install"
 u  = "update"
+s  = "size"
+sr = "s --release"
+sp = "s --profile _publish"
+si = "s --profile _install"
 
 [profile]
 dev = { panic = "abort" }
