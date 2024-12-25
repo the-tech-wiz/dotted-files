@@ -1,0 +1,9 @@
+[general]
+import = ["catppuccin-mocha.toml"]
+
+[window]
+dynamic_padding = true
+decorations = "None"
+
+[font]
+size = 15
