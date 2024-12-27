@@ -1,0 +1,4 @@
+#!/bin/env sh
+
+yes | paru -Qtdq | paru -Rns -
+yes | paru -Sc

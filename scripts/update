@@ -1,0 +1,6 @@
+#!/bin/env sh
+
+paru
+rustup update
+cargo install-update -a
+sudo waydroid upgrade
