@@ -6,12 +6,13 @@ fish_add_path $HOME/.local/bin
 
 if status is-interactive
     if ! test -z "$XDG_CURRENT_DESKTOP" && test -z "$TMUX"
-        exec tmux new -As default
+        exec tmux new -A
     end
 
     pfetch
     starship init fish | source
     direnv hook fish | source
+    source /usr/share/doc/find-the-command/ftc.fish noprompt quiet
 
     alias ls 'eza --icons=auto'
     alias lla 'll -a'
