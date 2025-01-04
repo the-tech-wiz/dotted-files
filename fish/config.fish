@@ -12,7 +12,6 @@ if status is-interactive
     pfetch
     starship init fish | source
     direnv hook fish | source
-    source /usr/share/doc/find-the-command/ftc.fish noprompt quiet
 
     alias ls 'eza --icons=auto'
     alias lla 'll -a'
