@@ -4,6 +4,7 @@ import = ["catppuccin-mocha.toml"]
 [window]
 dynamic_padding = true
 decorations = "None"
+startup_mode = "Maximized"
 
 [font]
 size = 16.5
