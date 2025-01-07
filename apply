@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ ! -e ~/.tmux/plugins/tpm ]; then
+  printf "tpm not found, installing to ~/.tmux/plugins/tpm\\n"
+  git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
+fi
+
 cp -r \
   ./alacritty \
   ./bat \
@@ -14,3 +19,6 @@ cp -r \
   ./waybar \
   ~/.config
 cp -r ./.cargo ~/.cargo
+
+printf "remember to install/update tpm plugins with"
+printf "<prefix>+shift+i/<prefix>+shift+u\\n"
