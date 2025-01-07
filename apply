@@ -1,0 +1,16 @@
+#!/bin/sh
+
+cp -r \
+  ./alacritty \
+  ./bat \
+  ./btop \
+  ./fish \
+  ./hypr \
+  ./MangoHud \
+  ./mpv \
+  ./rustfmt \
+  ./starship.toml \
+  ./tmux \
+  ./waybar \
+  ~/.config
+cp -r ./.cargo ~/.cargo
