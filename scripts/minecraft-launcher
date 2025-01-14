@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-gamemoderun mangohud --dlsym /usr/bin/minecraft-launcher

@@ -2,7 +2,7 @@
 
 cp -r ~/.config/alacritty ./
 cp -r ~/.config/bat ./
-cp -r ~/.config/btop ./
+cp -r ~/.config/btop/btop.conf ~/.config/btop/themes ./
 cp ~/.config/fish/config.fish ./fish/
 cp -r ~/.config/hypr ./
 cp -r ~/.config/MangoHud ./
@@ -11,4 +11,5 @@ cp -r ~/.config/rustfmt ./
 cp ~/.config/starship.toml ./
 cp -r ~/.config/waybar ./
 cp ~/.cargo/config.toml ./.cargo/
+cp ~/.cargo/bin/cargo-inst ./.cargo/bin/
 cp -r ~/.config/tmux/tmux.conf ./tmux/

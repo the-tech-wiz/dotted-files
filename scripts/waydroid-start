@@ -1,9 +1,0 @@
-#!/usr/bin/env sh
-
-waydroid status | grep RUNNING
-if [ $? -eq 0 ]; then
-  gamemoderun waydroid session start &
-  disown
-fi
-
-gamemoderun waydroid show-full-ui
