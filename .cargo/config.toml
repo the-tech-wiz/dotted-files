@@ -32,8 +32,7 @@ si = "s --profile _install"
 rustc-wrapper = "sccache"
 
 [profile]
-dev = { panic = "abort" }
-release = { opt-level = 3, panic = "abort", strip = true }
+release = { opt-level = 3, strip = true }
 _publish = { inherits = "release", codegen-units = 1, lto = true }
 _install = { inherits = "_publish", rustflags = ["-Ctarget-cpu=native"] }
 
