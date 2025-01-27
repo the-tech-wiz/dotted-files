@@ -1,11 +1,9 @@
 #!/usr/bin/env sh
 
-host=$(rustc -vV | grep 'host:' | cut -d ' ' -f 2)
-
 [ -n $CARGO ] && shift
 
 cargo install \
   --profile _install \
-  --target $host \
+  --target $(rustc --print host-tuple) \
   -Zbuild-std=std,panic_abort \
   $@
