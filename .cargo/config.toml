@@ -5,6 +5,8 @@ gc = true
 [alias]
 i = "inst"
 in = "info -v"
+be = "bench"
+bep = "bench --profile _publish"
 br = "b -r"
 bp = "b --profile _publish"
 bi = "b --profile _install"
