@@ -28,9 +28,6 @@ imports_layout = "HorizontalVertical"
 # match expressions
 match_arm_blocks = false
 
-# numerics
-float_literal_trailing_zero = "Never"
-
 # structs
 struct_field_align_threshold = 10
 use_field_init_shorthand = true
