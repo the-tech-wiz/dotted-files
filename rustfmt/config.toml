@@ -1,1 +1,39 @@
-max_width = 80
+# rustfmt config file.
+#
+# options are categorized into groups, and sorted
+# alphabetically in each group.
+
+# general
+max_width = 60
+unstable_features = true
+use_small_heuristics = "Max"
+
+# comments
+wrap_comments = true
+
+# derives
+merge_derives = false
+
+# expressions
+overflow_delimited_expr = true
+
+# impl blocks
+reorder_impl_items = true
+
+# imports
+group_imports = "StdExternalCrate"
+imports_granularity = "Module"
+imports_layout = "HorizontalVertical"
+
+# match expressions
+match_arm_blocks = false
+
+# numerics
+float_literal_trailing_zero = "Never"
+
+# structs
+struct_field_align_threshold = 10
+use_field_init_shorthand = true
+
+# try! and the ? operator
+use_try_shorthand = true
