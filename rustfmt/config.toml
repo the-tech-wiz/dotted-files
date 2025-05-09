@@ -24,7 +24,6 @@ imports_layout = "HorizontalVertical"
 match_arm_blocks = false
 
 # structs
-struct_field_align_threshold = 10
 use_field_init_shorthand = true
 
 # try! and the ? operator
