@@ -6,7 +6,6 @@ if [ ! -e ~/.tmux/plugins/tpm ]; then
 fi
 
 cp -r \
-  ./alacritty \
   ./bat \
   ./btop \
   ./fish \
@@ -17,6 +16,7 @@ cp -r \
   ./starship.toml \
   ./tmux \
   ./waybar \
+  ./wezterm \
   ~/.config
 cp -r ./.cargo/* ~/.cargo
 
