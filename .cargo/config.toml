@@ -4,9 +4,13 @@ gc = true
 
 [alias]
 in = "inst"
+il = "install --list"
+un = "uninstall"
 if = "info -v"
 ber = "bench --profile release"
 bei = "bench --profile _install"
+blr = "bloat --profile release"
+bli = "bloat --profile _install"
 br = "build --profile release"
 bi = "build --profile _install"
 rr = "run --profile release"
