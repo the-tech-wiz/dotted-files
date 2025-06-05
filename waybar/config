@@ -23,7 +23,7 @@
   "custom/clock": {
     "exec": "date +'%H:%M %d/%m'",
     "format": " {} ",
-    "interval": 1,
+    "interval": 1
   },
   "cpu": {
     "format": "cpu {usage}%",
@@ -45,8 +45,8 @@
   "wireplumber": {
     "format": "vol {volume}%",
     "format-muted": "muted",
+    "on-click": "pwvucontrol",
     "scroll-step": 5.0,
-    "on-click": "pavucontrol",
     "max-volume": 150
   },
   "hyprland/workspaces": {
