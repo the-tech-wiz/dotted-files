@@ -24,16 +24,22 @@ sr = "size --profile release"
 si = "size --profile _install"
 
 [build]
-incremental = false
 rustc-wrapper = "sccache"
 
-[profile]
-release = { opt-level = 3, strip = true }
-_publish = { inherits = "release", codegen-units = 1, lto = true }
-_install = { inherits = "_publish", rustflags = ["-Ctarget-cpu=native"] }
+[profile.dev]
+debug = "line-tables-only"
 
-[target.'cfg(all())']
-rustflags = ["-Zthreads=8"]
+[profile.release]
+incremental = false
+opt-level = 3
+codegen-units = 1
+debug = "line-tables-only"
+strip = false
+lto = true
+
+[profile._install]
+inherits = "release"
+rustflags = ["-Ctarget-cpu=native"]
 
 [target.'cfg(all(target_arch = "x86_64", target_os = "linux"))']
 rustflags = ["-Clink-arg=-fuse-ld=mold"]
