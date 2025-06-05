@@ -1,6 +1,7 @@
 set -g fish_greeting
 
 fish_add_path /opt/rocm/bin
+fish_add_path /opt/cuda/bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/coursier/bin
