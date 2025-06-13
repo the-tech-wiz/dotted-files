@@ -9,14 +9,9 @@ cp -r \
   ./bat \
   ./btop \
   ./fish \
-  ./hypr \
   ./MangoHud \
   ./mpv \
   ./rustfmt \
-  ./starship.toml \
-  ./tmux \
-  ./waybar \
-  ./wezterm \
   ~/.config
 cp -r ./.cargo/* ~/.cargo
 
