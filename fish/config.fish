@@ -7,14 +7,6 @@ fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/coursier/bin
 
 if status is-interactive
-    if ! test -z $XDG_CURRENT_DESKTOP && test -z $TMUX
-        if test $TMUX_ATTACH
-            exec tmux new -As inf
-        else
-            exec tmux new
-        end
-    end
-
     pfetch
     starship init fish | source
     direnv hook fish | source
@@ -24,4 +16,7 @@ if status is-interactive
     alias cat bat
     alias du dust
     alias tree erd
+    
+    alias codium code
+    alias rust_repl excvr_repl
 end
