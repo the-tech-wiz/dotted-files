@@ -17,6 +17,6 @@ if status is-interactive
     alias du dust
     alias tree erd
     
-    alias codium flatpak run com.vscodium.codium
+    alias codium 'flatpak run com.vscodium.codium'
     alias rust_repl excvr_repl
 end
