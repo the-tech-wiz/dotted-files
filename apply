@@ -10,5 +10,3 @@ cp -r \
   ~/.config
 cp -r ./.cargo/* ~/.cargo
 
-printf "remember to install/update tpm plugins with"
-printf "<prefix>+shift+i/<prefix>+shift+u\\n"
