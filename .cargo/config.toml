@@ -1,52 +1,22 @@
-[unstable]
-profile-rustflags = true
-gc = true
+# Cargo global configuration file
+# Location: ~/.cargo/config.toml
+# This file is optional — Cargo uses defaults if it's missing.
 
-[alias]
-in = "inst"
-il = "install --list"
-un = "uninstall"
-if = "info -v"
-ber = "bench --profile release"
-bei = "bench --profile _install"
-blr = "bloat --profile release"
-bli = "bloat --profile _install"
-br = "build --profile release"
-bi = "build --profile _install"
-rr = "run --profile release"
-ri = "run --profile _install"
-cl = "clean"
-do = "doc --open"
-nt = "nextest run"
-ntr = "nextest run --cargo-profile release"
-nti = "nextest run --cargo-profile _install"
-ntm = "nextest run --profile default-miri"
-ntl = "nextest list"
-ar = "asm --simplify --profile release"
-ai = "asm --simplify --profile _install"
-sr = "size --profile release"
-si = "size --profile _install"
+# [build]
+# jobs = 4
+# target-dir = "/home/username/.cargo/target"
 
-[build]
-rustc-wrapper = "sccache"
+# [term]
+# verbose = true
+# color = "always"
 
-[profile.dev]
-debug = "line-tables-only"
+# [env]
+# RUSTFLAGS = "-C target-cpu=native"
 
-[profile.release]
-incremental = false
-opt-level = 3
-codegen-units = 1
-debug = "line-tables-only"
-strip = false
-lto = true
+# [registries]
+# my-registry = { index = "https://my-registry.example.com/index" }
 
-[profile._install]
-inherits = "release"
-rustflags = ["-Ctarget-cpu=native"]
-
-[target.'cfg(all(target_arch = "x86_64", target_os = "linux"))']
-rustflags = [
-  "-Clink-arg=-fuse-ld=mold",
-  "-Clink-arg=-Wl,--compress-debug-sections=zstd",
-]
+# [init]
+# name = "Your Name"
+# edition = "2021"
+# vcs = "git"
