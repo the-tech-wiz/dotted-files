@@ -16,6 +16,5 @@ if status is-interactive
     alias cat bat
     alias du dust
     alias tree erd
-    
-    alias codium 'flatpak run com.vscodium.codium'
+    alias rq 'dnf repoquery'
 end
