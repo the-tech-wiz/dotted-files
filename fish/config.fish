@@ -25,7 +25,22 @@ fish_add_path /opt/rocm/bin
 fish_add_path /opt/cuda/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/coursier/bin
-
+# convenience cmds for dotfile management
+function push -a commitname
+    echo "Pushing config to dotted-files repo"
+    cd ~/dotted-files/
+    ~/dotted-files/pull
+    git commit -am $commitname
+    git push
+    cd ~
+end
+function pull
+    echo "Pulling config from dotted-files repo and applying"
+    cd ~/dotted-files/
+    git pull
+    ~/dotted-files/apply
+    cd ~
+end
 #interactive
 if status is-interactive
     starship init fish | source
@@ -37,8 +52,9 @@ if status is-interactive
     alias du dust
     alias tree erd
     alias rq 'dnf repoquery'
-    #alias push 'echo("Pushing config to dotted-files"); ~/dotted-files/pull; git commit -c ~/dotted-files/ -a && git push'
-    #alias pull 'echo("Pulling config from dotted-files"); git pull -c ~/dotted-files/ ; ~/dotted-files/apply '
+    # alias push='echo("Pushing config to dotted-files"); ~/dotted-files/pull; git commit -c ~/dotted-files/ -a && git push'
+    # alias pull='echo("Pulling config from dotted-files"); git pull -c ~/dotted-files/ ; ~/dotted-files/apply '
+
     pfetch
 end
 zoxide init fish | source
