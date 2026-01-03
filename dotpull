@@ -1,9 +1,0 @@
-#!/bin/bash
-
-COMMITMSG=$1
-echo "Pushing config to dotted-files repo"
-pushd ~/dotted-files/
-./pull
-git commit -am "$COMMITMSG"
-git push
-popd
