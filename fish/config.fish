@@ -26,20 +26,20 @@ fish_add_path /opt/cuda/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/share/coursier/bin
 # convenience cmds for dotfile management
-function push -a commitname
+function dotpush -a commitname
     echo "Pushing config to dotted-files repo"
-    cd ~/dotted-files/
+    pushd ~/dotted-files/
     ~/dotted-files/pull
     git commit -am $commitname
     git push
-    cd ~
+    popd
 end
-function pull
+function dotpull
     echo "Pulling config from dotted-files repo and applying"
-    cd ~/dotted-files/
+    pushd ~/dotted-files/
     git pull
     ~/dotted-files/apply
-    cd ~
+    popd
 end
 #interactive
 if status is-interactive
