@@ -52,8 +52,6 @@ if status is-interactive
     alias du dust
     alias tree erd
     alias rq 'dnf repoquery'
-    # alias push='echo("Pushing config to dotted-files"); ~/dotted-files/pull; git commit -c ~/dotted-files/ -a && git push'
-    # alias pull='echo("Pulling config from dotted-files"); git pull -c ~/dotted-files/ ; ~/dotted-files/apply '
 
     pfetch
 end
