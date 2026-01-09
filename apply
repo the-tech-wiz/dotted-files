@@ -4,7 +4,6 @@ cp -r \
   ./bat \
   ./btop \
   ./fish \
-  ./MangoHud \
   ./mpv \
   ./rustfmt \
   ~/.config
