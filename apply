@@ -1,11 +1,7 @@
 #!/bin/sh
 
 cp -r \
-  ./bat \
-  ./btop \
   ./fish \
-  ./mpv \
   ./rustfmt \
   ~/.config
 cp -r ./.cargo/* ~/.cargo
-
