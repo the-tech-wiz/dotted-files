@@ -7,10 +7,10 @@ set -gx DIRENV_WARN_TIMEOUT 0
 set -gx GIT_EXTERNAL_DIFF difft
 
 # XDG base dirs
-set -gx XDG_DATA_HOME $HOME/.local/share
-set -gx XDG_CONFIG_HOME $HOME/.config
-set -gx XDG_STATE_HOME $HOME/.local/state
-set -gx XDG_CACHE_HOME $HOME/.cache
+# set -gx XDG_DATA_HOME $HOME/.local/share
+# set -gx XDG_CONFIG_HOME $HOME/.config
+# set -gx XDG_STATE_HOME $HOME/.local/state
+# set -gx XDG_CACHE_HOME $HOME/.cache
 
 # rust home dirs
 set -gx RUSTUP_HOME $XDG_DATA_HOME/rustup
