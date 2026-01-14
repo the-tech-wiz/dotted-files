@@ -18,7 +18,7 @@ set -gx CARGO_HOME $XDG_DATA_HOME/cargo
 
 #nix
 source "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish"
-fish_add_path -gP $XDG_STATE_HOME/nix/profile/bin
+fish_add_path -gP $HOME/.nix-profile/bin
 
 fish_add_path $HOME/.cargo/bin
 fish_add_path /opt/rocm/bin
