@@ -1,6 +1,5 @@
 #!/bin/sh
 
-cp ~/.config/fish/config.fish ./fish/
 cp -r ~/.config/rustfmt/ ./
 cp ~/.cargo/config.toml ./.cargo/
 cp ~/.cargo/bin/cargo-inst ./.cargo/bin/

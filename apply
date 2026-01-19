@@ -1,7 +1,6 @@
 #!/bin/sh
 
 cp -r \
-  ./fish \
   ./rustfmt \
   ~/.config
 cp -r ./.cargo/* ~/.cargo
